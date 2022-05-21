@@ -19,5 +19,4 @@ def end():
 
 #simple test
 start()
-print("hello world")
 end()
