@@ -1,0 +1,33 @@
+<html>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<body>
+    <div class="text-center p-3 mt-5 border container bg-dark text-white">
+        <h3>Find language</h3>
+        <input type="text" id="app1" oninput="test()" >
+        <br>language : <a id="app2"></a>
+    </div>
+
+</body>
+<script>
+function test(){ 
+    box = document.getElementById("app1")
+    if(box.value.match(/^([a-z0-9])+$/i)){
+        console.log('en')
+        document.getElementById("app2").innerHTML = "English"
+    }    
+    if(box.value.match(/^([ก-ฮ๐-๙])+$/i)){
+        console.log('th')
+        document.getElementById("app2").innerHTML = "Thai"
+    }
+    else if(box.value.match(/^([ㄅ-ㄙ一-九])+$/i)){
+        console.log('ch')
+        document.getElementById("app2").innerHTML = "China"
+    }
+    }
+
+
+
+
+</script>
+</html>
